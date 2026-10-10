@@ -138,6 +138,25 @@ label input[readonly]{background:#edf4f1;color:#426c66} .field-comment{font-size
 .dossier-card{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 20px;border:1px solid #dce9e4;background:#f8fbfa;border-radius:12px;margin:10px 0}.dossier-card strong{display:block;font-size:16px;color:#244f4b}.dossier-card small{display:block;margin-top:5px;color:#6b807c}.dossier-card .actions{flex-shrink:0}@media(max-width:650px){.dossier-card{align-items:stretch;flex-direction:column}.dossier-card .actions button{flex:1}}
 @media print{.sheet:last-child .legal-notice{position:absolute;bottom:25mm;left:20mm;right:20mm;background:#f2f6f5;border-left:3px solid #14928a;border-radius:3mm;padding:5mm 6mm}.sheet:last-child .legal-notice strong{display:block;font:700 9px Arial;letter-spacing:1px;color:#137f79;margin-bottom:3mm}.sheet:last-child .legal-notice p{font:9px/1.45 Arial!important;margin:1mm 0!important;text-align:left!important;color:#52636a!important}}
 @media print{.sheet:first-child h1.cover-title{display:block!important;width:100%!important;max-width:none!important;text-align:center!important;margin:0 auto 10mm!important;line-height:1.2!important}.sheet .fee-title{font-size:23px!important;margin:8mm 0 4mm!important}.sheet .fee-subtitle{font-size:15px!important;letter-spacing:.2px!important;margin:6mm 0 4mm!important;color:#244d52!important}.sheet .editorial-notes{background:#f2f7f5;padding:4mm 6mm;border-radius:3mm;margin:4mm 0}.sheet .editorial-notes h3{margin:0 0 2mm!important}.sheet .editorial-notes ul{margin:0!important}.agent-profile{display:flex;align-items:center;gap:7mm}.agent-photo{width:31mm;height:38mm;object-fit:cover;border-radius:3mm;border:1px solid #d4e5e0}.agent-placeholder{width:31mm;height:38mm;display:flex;align-items:center;justify-content:center;background:#dcece7;color:#1b716d;font:700 25px Arial;border-radius:3mm}.agent-profile-info{flex:1}.agent-profile-info p{margin:2mm 0!important}.sheet:last-child .hero{margin-top:8mm!important;padding:6mm!important}}
+
+/* Dernière page : bloc conseiller et mentions légales sans chevauchement */
+@media print{
+.sheet:last-child{display:flex!important;flex-direction:column!important;align-items:stretch!important;padding-top:15mm!important;padding-bottom:19mm!important}
+.sheet:last-child .logo{max-height:23mm!important;max-width:72mm!important;margin:0 auto 7mm!important;flex-shrink:0!important}
+.sheet:last-child>.tag{margin-bottom:4mm!important}
+.sheet:last-child>h1{font-size:27px!important;line-height:1.12!important;margin:0 0 4mm!important;text-align:left!important}
+.sheet:last-child>.rule{margin:3mm 0 5mm!important}
+.sheet:last-child>h2{font-size:19px!important;margin:0 0 4mm!important;text-align:left!important}
+.sheet:last-child>p{font-size:10px!important;line-height:1.4!important;margin:0 0 2mm!important;text-align:left!important}
+.sheet:last-child>.hero{margin:6mm 0 5mm!important;padding:5mm 6mm!important;flex-shrink:0!important;min-height:42mm!important}
+.sheet:last-child>.hero h3{margin:0 0 4mm!important;padding:0!important;background:none!important}
+.sheet:last-child .agent-profile{display:flex!important;align-items:center!important;gap:6mm!important;min-height:31mm!important}
+.sheet:last-child .agent-photo,.sheet:last-child .agent-placeholder{width:27mm!important;height:31mm!important;flex-shrink:0!important;object-fit:cover!important}
+.sheet:last-child .agent-profile-info p{text-align:left!important;font-size:11px!important;line-height:1.3!important;margin:0 0 2mm!important;overflow-wrap:anywhere!important}
+.sheet:last-child .legal-notice{position:static!important;inset:auto!important;display:block!important;flex-shrink:0!important;margin-top:auto!important;margin-bottom:9mm!important;padding:4mm 5mm!important;background:#f1f6f4!important;border-left:3px solid #14928a!important;border-radius:2mm!important}
+.sheet:last-child .legal-notice p{font-size:8px!important;line-height:1.4!important;margin:1mm 0!important}
+.sheet:last-child .foot{position:absolute!important;bottom:10mm!important}
+}
 </style></head><body>
 <header><div><small>ACTION IMMOBILIÈRE · BREST / QUIMPER</small><h1>Estimation immobilière</h1><div id="saveStatus" style="font-size:12px;color:#27877d;margin-top:7px">Sauvegarde automatique activée</div></div><div class="actions"><button class="secondary" onclick="resetForm()">Nouveau dossier</button><button class="secondary" onclick="save()">Enregistrer</button><button onclick="printReport()">Générer le dossier PDF</button></div></header>
 <nav class="tabs" aria-label="Navigation du dossier"><button type="button" onclick="showTab(0)">Rendez-vous</button><button type="button" onclick="showTab(1)">Caractéristiques</button><button type="button" onclick="showTab(2)">Énergie</button><button type="button" onclick="showTab(3)">Pièces</button><button type="button" onclick="showTab(4)">Estimation</button><button type="button" onclick="showTab(5)">Mes dossiers</button></nav><main class="editor">
