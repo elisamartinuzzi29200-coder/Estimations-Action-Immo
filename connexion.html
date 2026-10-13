@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <meta name="robots" content="noindex,nofollow">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src https://nqzriajxhkiujlnldayx.supabase.co; base-uri 'none'; form-action 'none'; object-src 'none'">
+  <meta name="theme-color" content="#16837e">
+  <title>Connexion &eacute;quipe | Action Immobili&egrave;re</title>
+  <link rel="stylesheet" href="connexion.css?v=1">
+  <script src="connexion.js?v=1" defer></script>
+</head>
+<body>
+  <main class="shell">
+    <header class="brand">
+      <img src="./ACTION%20IMMO_LOGO%20RVB.png" alt="Action Immobili&egrave;re" width="230" height="163">
+      <p class="eyebrow">ESTIMATIONS &middot; BREST ET QUIMPER</p>
+    </header>
+    <section class="card" aria-labelledby="page-title">
+      <p class="step">ESPACE &Eacute;QUIPE</p>
+      <h1 id="page-title">Votre acc&egrave;s personnel</h1>
+      <p id="intro">Connectez-vous avec votre adresse professionnelle et votre mot de passe.</p>
+      <div id="message" role="status" aria-live="polite" class="message" hidden></div>
+      <div id="checking">V&eacute;rification de votre session&hellip;</div>
+      <form id="login-form" hidden>
+        <label for="login-email">Adresse e-mail</label>
+        <input id="login-email" name="email" type="email" autocomplete="username" required maxlength="254" placeholder="prenom@action-immo.com">
+        <label for="login-password">Mot de passe</label>
+        <input id="login-password" name="password" type="password" autocomplete="current-password" required maxlength="200">
+        <button type="submit">Se connecter</button>
+        <button id="show-recovery" type="button" class="text-button">Activer mon acc&egrave;s / Mot de passe oubli&eacute;</button>
+      </form>
+      <form id="recovery-form" hidden>
+        <p>Un lien vous permettra de choisir votre mot de passe sur cette page, sans recr&eacute;er votre compte.</p>
+        <label for="recovery-email">Adresse e-mail du compte existant</label>
+        <input id="recovery-email" name="email" type="email" autocomplete="username" required maxlength="254">
+        <button id="request-link" type="submit">Recevoir un lien pour choisir mon mot de passe</button>
+        <p id="cooldown" class="hint" aria-live="polite"></p>
+        <button type="button" class="text-button" data-back>Revenir &agrave; la connexion</button>
+      </form>
+      <form id="password-form" hidden>
+        <p>Compte v&eacute;rifi&eacute; : <strong id="password-account"></strong></p>
+        <label for="new-password">Nouveau mot de passe</label>
+        <input id="new-password" name="new-password" type="password" autocomplete="new-password" minlength="12" maxlength="200" required aria-describedby="password-help">
+        <p id="password-help" class="hint">Au moins 12 caract&egrave;res. Choisissez une phrase de passe unique et conservez-la dans votre gestionnaire de mots de passe.</p>
+        <label for="confirm-password">Confirmer le nouveau mot de passe</label>
+        <input id="confirm-password" name="confirm-password" type="password" autocomplete="new-password" minlength="12" maxlength="200" required>
+        <button type="submit">Enregistrer mon mot de passe</button>
+      </form>
+      <section id="connected" hidden>
+        <div class="verified"><span aria-hidden="true">&#10003;</span><div><strong>Connexion r&eacute;ussie</strong><p id="connected-account"></p></div></div>
+        <p>Votre acc&egrave;s personnel fonctionne. La synchronisation des dossiers sera raccord&eacute;e &agrave; l'application apr&egrave;s cette validation.</p>
+        <p class="hint">Pour le moment, les dossiers de l'application restent enregistr&eacute;s sur l'appareil utilis&eacute;.</p>
+        <a class="primary-link" href="./">Retrouver l'application d'estimation</a>
+        <button id="change-password" type="button" class="text-button">Choisir / changer mon mot de passe</button>
+        <button id="sign-out" type="button" class="text-button">Se d&eacute;connecter</button>
+      </section>
+      <noscript><p>Activez JavaScript dans votre navigateur pour utiliser la connexion.</p></noscript>
+    </section>
+    <p class="privacy">Aucun dossier local n'est modifi&eacute; par cette page. Votre mot de passe est transmis uniquement &agrave; Supabase ; il n'est jamais enregistr&eacute; dans les dossiers.</p>
+    <a class="back-link" href="./">&larr; Continuer avec mes dossiers locaux</a>
+    <footer>Action Immobili&egrave;re &middot; Acc&egrave;s r&eacute;serv&eacute; &agrave; l'&eacute;quipe</footer>
+  </main>
+</body>
+</html>
