@@ -104,7 +104,7 @@ function showApp(email){
   el.login.classList.add('hidden');
   el.shell.classList.remove('hidden');
   el.user.textContent=email;
-  if(!el.frame.getAttribute('src'))el.frame.src='estimation-local.html?v=cloud-1';
+  if(!el.frame.getAttribute('src'))el.frame.src='estimation-local.html?v=cloud-photo-1';
   setStatus(navigator.onLine?'Connexion au dossier partagé…':'Mode hors ligne — brouillon conservé',navigator.onLine?'saving':'offline');
 }
 
